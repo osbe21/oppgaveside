@@ -1,1 +1,1 @@
-En side hvor elever kan laste opp skoleoppgaver
+En side hvor elever kan laste opp og laste ned skoleoppgaver
