@@ -19,7 +19,7 @@ onAuthStateChanged(auth, (user) => isLoggedIn.value = Boolean(user));
 
         <div class="flex-1 relative flex items-center ">
             <input placeholder="Søk..." type="text" class="w-full h-10 pl-5 border rounded-lg">
-            <button class="absolute size-8 right-1 border rounded-lg text-sm">Søk</button>
+            <button class="absolute size-8 right-1 border rounded-lg text-xs">Søk</button>
         </div>
 
         <div class="flex-1 flex justify-end items-center gap-5">

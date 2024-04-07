@@ -1,7 +1,9 @@
 <script setup>
 import { ref } from 'vue';
-import { RouterLink } from 'vue-router'
+import { RouterLink, useRouter } from 'vue-router'
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
+
+const router = useRouter();
 
 const email = ref('');
 const password = ref('');
@@ -12,7 +14,7 @@ const auth = getAuth();
 
 const signup = () => {
     createUserWithEmailAndPassword(auth, email.value, password.value)
-        .then(userCredentials => console.log("yay"))
+        .then(userCredentials => router.push('/'))
         .catch(error => errorMessage.value = error.message);
 };
 </script>

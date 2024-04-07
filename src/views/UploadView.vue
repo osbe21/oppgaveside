@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { getAuth } from 'firebase/auth';
+import { getAuth, signOut } from 'firebase/auth';
 import { getFirestore, collection, addDoc, Timestamp } from 'firebase/firestore';
 
 const router = useRouter();
@@ -14,6 +14,11 @@ const title = ref('');
 const content = ref('');
 
 const errorMessage = ref('');
+
+// Om brukeren ikke har logget inn, redirect til login
+if (!auth.currentUser)
+    router.push('/login');
+
 
 const upload = () => {
     addDoc(collection(db, 'documents'), {

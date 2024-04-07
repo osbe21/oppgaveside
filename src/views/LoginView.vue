@@ -13,7 +13,7 @@ const errorMessage = ref('');
 
 const login = () => {
     signInWithEmailAndPassword(auth, email.value, password.value)
-        .then(userCredentials => router.go(-1))
+        .then(userCredentials => router.push('/'))
         .catch(error => errorMessage.value = error.message);
 };
 </script>
