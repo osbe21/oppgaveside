@@ -12,12 +12,15 @@ onAuthStateChanged(auth, (user) => isLoggedIn.value = Boolean(user));
 </script>
 
 <template>
-    <nav class="sticky top-0 h-20 px-5 flex justify-between items-center bg-zinc-50 shadow-md">
+    <nav class="h-20 px-5 bg-white">
+
+    </nav>
+    <!-- <nav class="sticky top-0 h-20 px-5 flex justify-between items-center bg-white shadow-md">
         <div class="flex-1">
-            <RouterLink to="/"><h1 class="text-5xl">LOGO</h1></RouterLink>
+            <RouterLink to="/"><h1 class="font-display text-3xl font-semibold">Side</h1></RouterLink>
         </div>
 
-        <div class="flex-1 relative flex items-center ">
+        <div class="flex-1 relative flex items-center">
             <input placeholder="Søk..." type="text" class="w-full h-10 pl-5 border rounded-lg">
             <button class="absolute size-8 right-1 border rounded-lg text-xs">Søk</button>
         </div>
@@ -28,5 +31,5 @@ onAuthStateChanged(auth, (user) => isLoggedIn.value = Boolean(user));
             <RouterLink v-if="isLoggedIn" to="/profile">Min Profil</RouterLink>
             <RouterLink v-else to="/login">Log Inn</RouterLink>
         </div>
-    </nav>
+    </nav> -->
 </template>
