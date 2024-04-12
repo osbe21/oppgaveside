@@ -2,6 +2,8 @@
 import { ref } from 'vue';
 import { useRouter, RouterLink } from 'vue-router';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
+import Input from '@/components/Form/Input.vue';
+import SubmitButton from '@/components/Form/SubmitButton.vue';
 
 const router = useRouter();
 const auth = getAuth();
@@ -19,12 +21,24 @@ const login = () => {
 </script>
 
 <template>
-    <section class="w-2/3 h-screen m-auto shadow-md">
+    <nav class="h-24 pl-8 flex items-center">
+        <RouterLink to="/" class="my-2">
+            <h1 class="text-3xl">LOGO</h1>
+        </RouterLink>
+    </nav>
+    <section class="w-1/3 mx-auto flex flex-col items-center gap-8">
         <p v-if="errorMessage.length">{{ errorMessage }}</p>
+
         <h1 class="text-5xl">Log Inn</h1>
-        <input v-model="email" placeholder="Email" type="text" class="block border">
-        <input v-model="password" placeholder="Passord" type="password" class="block border">
-        <button @click="login" class="p-2 border">Log Inn</button>
+
+        <form @submit.prevent="login" class="w-full flex flex-col items-center gap-8">
+            <Input v-model="email" label="Email" />
+            <Input v-model="password" label="Passord" type="password" />
+            <SubmitButton>
+                Log Inn
+            </SubmitButton>
+        </form>
+
         <p>Har du ikke en bruker? <RouterLink to='/signup' class="text-blue-600">Lag en her</RouterLink></p>
     </section>
 </template>

@@ -1,7 +1,9 @@
 <script setup>
-
+import Layout from '@/components/Layout.vue';
 </script>
 
 <template>
-  <div></div>
+  <Layout show-navbar>
+
+  </Layout>
 </template>

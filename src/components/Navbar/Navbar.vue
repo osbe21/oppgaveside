@@ -1,7 +1,8 @@
 <script setup>
 import { ref } from 'vue';
-import { RouterLink } from 'vue-router';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import Searchbar from '@/components/Navbar/Searchbar.vue';
+import ProfileButton from '@/components/Navbar/ProfileButton.vue';
 
 const auth = getAuth();
 
@@ -12,8 +13,12 @@ onAuthStateChanged(auth, (user) => isLoggedIn.value = Boolean(user));
 </script>
 
 <template>
-    <nav class="h-20 px-5 bg-white">
+    <nav class="sticky top-0 h-20 px-8 flex items-center gap-6 shadow-md bg-white">
+        <h2 class="text-3xl mr-auto">Side</h2>
 
+        <Searchbar />
+
+        <ProfileButton />
     </nav>
     <!-- <nav class="sticky top-0 h-20 px-5 flex justify-between items-center bg-white shadow-md">
         <div class="flex-1">
