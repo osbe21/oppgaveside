@@ -16,7 +16,7 @@ getDocs(collection(db, 'documents'))
 </script>
 
 <template>
-    <Layout>
+    <Layout show-navbar>
         <section class="w-2/3 h-screen m-auto shadow-md">
             <h1 class="m-5 text-5xl capitalize">Alle tekster</h1>
             <p v-if="!documents.length" class="m-5 text-lg">Ingen tekster funnet...</p>

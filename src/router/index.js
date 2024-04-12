@@ -11,26 +11,32 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      name: 'Hjemside',
       component: HomeView
     },
     {
       path: '/login',
+      name: 'Logg Inn',
       component: LoginView
     },
     {
       path: '/signup',
+      name: 'Lag Bruker',
       component: SignupView
     },
     {
       path: '/profile',
+      name: 'Min Profil',
       component: ProfileView
     },
     {
       path: '/upload',
+      name: 'Last Opp',
       component: UploadView
     },
     {
       path: '/alldocuments',
+      name: 'Alle Tekster',
       component: AllDocumentsView
     }
   ]

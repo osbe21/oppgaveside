@@ -19,7 +19,7 @@ const logOut = () => {
 </script>
 
 <template>
-    <div class="sticky top-0 w-60 h-screen py-5 flex flex-col items-stretch text-white bg-sky-950">
+    <div class="sticky top-0 w-52 h-screen py-5 flex flex-col items-stretch text-white bg-sky-950">
         <RouterLink to="/" class="mx-auto my-6">
             <h1 class="text-5xl">LOGO</h1>
         </RouterLink>

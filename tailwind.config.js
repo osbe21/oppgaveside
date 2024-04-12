@@ -5,7 +5,7 @@ export default {
     extend: {
       fontFamily: {
         'display': ['"Sarabun"', 'sans-serif'],
-        'body': ['"Josefin Sans"', 'sans-serif']
+        'body': ['"Inter Tight"', 'sans-serif']
       },
     },
   },
