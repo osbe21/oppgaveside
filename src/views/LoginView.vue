@@ -15,7 +15,7 @@ const errorMessage = ref('');
 
 const login = () => {
     signInWithEmailAndPassword(auth, email.value, password.value)
-        .then(userCredentials => router.push('/'))
+        .then(userCredentials => router.go(-1))
         .catch(error => errorMessage.value = error.message);
 };
 </script>
@@ -39,6 +39,6 @@ const login = () => {
             </SubmitButton>
         </form>
 
-        <p>Har du ikke en bruker? <RouterLink to='/signup' class="text-blue-600">Lag en her</RouterLink></p>
+        <p>Har du ikke en bruker? <RouterLink to='/signup' replace class="text-blue-600">Lag en her</RouterLink></p>
     </section>
 </template>

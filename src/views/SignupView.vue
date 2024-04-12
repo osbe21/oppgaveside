@@ -16,7 +16,7 @@ const auth = getAuth();
 
 const signup = () => {
     createUserWithEmailAndPassword(auth, email.value, password.value)
-        .then(userCredentials => router.push('/'))
+        .then(userCredentials => router.go(-1))
         .catch(error => errorMessage.value = error.message);
 };
 </script>
@@ -40,6 +40,6 @@ const signup = () => {
             </SubmitButton>
         </form>
 
-        <p>Har du allerede en bruker? <RouterLink to='/login' class="text-blue-600">Logg inn her</RouterLink></p>
+        <p>Har du allerede en bruker? <RouterLink to='/login' replace class="text-blue-600">Logg inn her</RouterLink></p>
     </section>
 </template>
